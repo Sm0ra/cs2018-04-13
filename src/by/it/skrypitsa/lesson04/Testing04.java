@@ -1,11 +1,12 @@
-package by.it._tasks_.lesson04;
+package by.it.skrypitsa.lesson04;
 
 import org.junit.Test;
 
 import java.io.*;
 import java.lang.reflect.Method;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 @SuppressWarnings("all") //море warnings. всех прячем.
 
