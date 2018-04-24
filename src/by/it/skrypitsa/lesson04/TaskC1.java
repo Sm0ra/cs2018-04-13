@@ -36,7 +36,81 @@ package by.it.skrypitsa.lesson04;
 За месяц 14 начислено $0.0
 
 */
+import java.util.Scanner;
 public class TaskC1 {
+    public static void main(String[] args) {
+        System.out.println("Какую вы хотите зарплату в $$$?");
+        Scanner scanner = new Scanner(System.in);
+        float zp = scanner.nextFloat();
+        if (zp < 300 || zp > 3000)
+            System.out.println("Мы вам перезвоним!");
+        else {
+            String month_name = "";
+            float amount = 0;
+            for (int month = 0; month <= 14; month++){
+                switch (month){
+                    case 0:
+                    case 13:
+                    case 14:
+                        month_name = "месяц " + month;
+                        amount = 0;
+                    break;
+                    case 1:
+                        month_name = "январь";
+                        amount = zp*1.5f;
+                        break;
+                    case 2:
+                        month_name = "февраль";
+                        amount = zp*1.5f;
+                        break;
+                    case 3:
+                        month_name = "март";
+                        amount = zp*1.5f;
+                        break;
+                    case 4:
+                        month_name = "апрель";
+                        amount = zp*1.5f;
+                        break;
+                    case 5:
+                        month_name = "май";
+                        amount = zp*1.5f;
+                        break;
+                    case 6:
+                        month_name = "июнь";
+                        amount = zp;
+                        break;
+                    case 7:
+                        month_name = "июль";
+                        amount = zp;
+                        break;
+                    case 8:
+                        month_name = "август";
+                        amount = zp;
+                        break;
+                    case 9:
+                        month_name = "сентябрь";
+                        amount = zp*1.5f;
+                        break;
+                    case 10:
+                        month_name = "октябрь";
+                        amount = zp*1.5f;
+                        break;
+                    case 11:
+                        month_name = "ноябрь";
+                        amount = zp*1.5f;
+                        break;
+                    case 12:
+                        month_name = "декабрь";
+                        amount = zp*1.5f;
+                        break;
+                }
+                System.out.println("За " + month_name  + " начислено $"+ amount);
+                if (amount == 666.0) {
+                    break;
+                }
+            }
 
+        }
 
+}
 }
